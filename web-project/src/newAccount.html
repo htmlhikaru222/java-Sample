@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規アカウント登録</title>
+    <script>
+        function validateForm() {
+            const field = ["name", "gender", "birthday", "coffee", "phone", "region"];
+            for (const field of fields) {
+                if (!document.getElementById(field).value) {
+                    alert("全ての項目を入力してください");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>新規アカウント登録</h1>
+    <form action="/confirm.html" onsubmit="return validateForm()">
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="gender">性別:</label>
+        <input type="text" id="gender" name="gender">
+        <br>
+        <label for="birthday">誕生日:</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+        <label for="coffee">好きなコーヒー:</label>
+        <input type="text" id="coffee" name="coffee">
+        <br>
+        <label for="phone">電話番号:</label>
+        <input type="tel" id="phone" name="phone">
+        <br>
+        <label for="region">地域:</label>
+        <input type="text" id="region" name="region">
+        <br>
+        <button type="submit">確認画面へ</button>
+    </form>
+</body>
+</html>
